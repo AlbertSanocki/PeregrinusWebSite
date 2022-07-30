@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/all.css">
+        <link rel="icon" href="favicon.ico">
+        <link rel="shortcut-icon" href="favicon.ico" type="image/x-icon">
+        <title>Peregrinus</title>
+    </head>
+    <body>
+
+        <!-- Home Page -->
+
+        <section id="showcase">
+            <div class="logo"><h3>Peregrinus</h3></div>
+            <div class="content">
+                <h1>Usługi sokolnicze</h1>
+                <p>
+                    Chcesz dowiedzieć się więcej? Skontaktuj się z nami!
+                </p>
+                <div class="contact-btn">
+                    <button type="button"><span></span><a href="tel:+48532839197"><img src="images/phone.png">532 839 197</a></button>
+                    <button type="button"><span></span><a href="mailto:peregrinus356@gmail.com"><img src="images/mail.png">peregrinus356@gmail.com</a></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Side Nav -->
+
+        <div id="sideNav">
+            <nav>
+                <ul id="closeMenu">
+                    <li><a href="#showcase">Home</a></li>
+                    <li><a href="#aboutUs">O nas</a></li>
+                    <li><a href="#galery">Galeria</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="menuBtn">
+            <img src="images/menu.png" id="menu">
+        </div>
+
+        <!-- About Us -->
+
+        <section id="aboutUs">
+            <div class="title-text">
+                <p>O NAS</p>
+                <h1>Dlaczego my?</h1>
+            </div>
+            <div class="feature-box">
+                <div class="features">
+                    <h1>Doświadczenie</h1>
+                    <div class="features_desc">
+                        <div class="feature-icon">
+                            <i class="fa-regular fa-clipboard"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Jesteśmy specjalistami z wieloletnim doświadczeniem</p>
+                        </div>
+                    </div>
+                    <h1>Dotrzemy wszędzie</h1>
+                    <div class="features_desc">
+                        <div class="feature-icon">
+                            <i class="fa-regular fa-map"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Świadczymy nasze usługi na terenie całej Polski</p>
+                        </div>
+                    </div>
+                    <h1>Kochamy to co robimy</h1>
+                    <div class="features_desc">
+                        <div class="feature-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+                        <div class="feature-text">
+                            <p>Jesteśmy pasjonatami. Praca sprawia nam przyjemność dlatego jesteśmy tak skuteczni!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="features-img">
+                    <img src="images/aboutus.JPG">
+                </div>
+            </div>
+        </section>
+
+        <!-- Galery -->
+
+        <section id="galery">
+            <div class="title-text">
+                <p>GALERIA</p>
+                <h1>Tak Pracujemy</h1>
+            </div>
+            <div class="full-img-box" id="fullImgBox">
+                <div class="full-img">
+                    <img src="images/img1.JPG" id="fullImg">
+                    <span onclick="closeFullImg()"><img src="images/whiteclose.png"></span>
+                </div>
+            </div>
+            <div class="galery-box">
+                <div class="single-photo">
+                    <img src="images/img1.JPG" onclick="openFullImg(this.src)">
+                </div>
+                <div class="single-photo">
+                    <img src="images/img2.JPG" onclick="openFullImg(this.src)">
+                </div>
+                <div class="single-photo">
+                    <img src="images/img3.JPG" onclick="openFullImg(this.src)">
+                </div>
+                <div class="single-photo">
+                    <img src="images/img4.JPG" onclick="openFullImg(this.src)">
+                </div>
+                <div class="single-photo">
+                    <img src="images/img5.JPG" onclick="openFullImg(this.src)">
+                </div>
+                <div class="single-photo">
+                    <img src="images/img6.JPG" onclick="openFullImg(this.src)">
+                </div>
+        </section>
+
+        <!-- Contact -->
+
+        <section id="contact">
+            <div class="title-text">
+                <p>KONTAKT</p>
+                <h1>Sprawdź jak<br/> możesz się z nami skontaktować</h1>
+            </div>
+            <div class="contact-row">
+                <div class="contact-left">
+                    <h1>Perigrinus Kontakt</h1>
+                    <p><i class="fa-solid fa-at"></i>peregrinus356@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+(48) 532 839 197</p>
+                </div>
+                <div class="contact-right">
+                    <h1>Social media</h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Scripts -->
+
+        <script>
+
+            // Side Nav
+
+            var closeMenu = document.getElementById("closeMenu")
+            var menuBtn = document.getElementById("menuBtn")
+            var sideNav = document.getElementById("sideNav")
+            var menu = document.getElementById("menu")
+            sideNav.style.right ="-250px"
+
+            menuBtn.onclick = function(){
+                if(sideNav.style.right == "-250px"){
+                    sideNav.style.right = "0";
+                    menu.src = "images/close.png"
+                }
+                else {
+                    sideNav.style.right = "-250px";
+                    menu.src = "images/menu.png"
+                }
+            }
+
+            closeMenu.onclick = function(){
+                if(sideNav.style.right == "0px"){
+                    sideNav.style.right = "-250px";
+                    menu.src = "images/menu.png"
+                }
+            }
+
+            // Galery
+
+            var fullImgBox = document.getElementById("fullImgBox");
+            var fullImg = document.getElementById("fullImg");
+
+            function openFullImg(source) {
+                fullImgBox.style.display = "flex";
+                fullImg.src = source;
+            }
+
+            function closeFullImg() {
+                fullImgBox.style.display = "none";
+            }
+        </script>
+    </body>
+</html>
