@@ -40,6 +40,11 @@
     margin-top: 80px;
 }
 
+.content ul li {
+    list-style: disc outside;
+    font-size: 18px;
+}
+
 .content p {
     margin: 20px auto;
     font-weight: 100;
@@ -154,6 +159,11 @@ nav ul li a {
     padding-bottom: 70px;
 }
 
+.subtitle-text {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
 .title-text p {
     margin: auto;
     font-size: 20px;
@@ -181,6 +191,14 @@ nav ul li a {
 
 .title-text h1 {
     font-size: 50px;
+}
+
+.subtitle-text h2 {
+    font-size: 50px;
+}
+
+.subtitle-text .fa-brands {
+    color: #FF0000;
 }
 
 .feature-box {
@@ -263,6 +281,7 @@ nav ul li a {
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-gap: 30px;
     margin: auto;
+    padding-bottom: 40px;
 }
 
 .single-photo img {
@@ -308,6 +327,30 @@ nav ul li a {
     width: 100%;
 }
 
+.video-box {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+    grid-gap: 30px;
+    margin: auto;
+    padding-bottom: 30px;
+}
+
+.yt-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; 
+    height: 0;
+}
+
+.yt-video iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 @media screen and (max-width: 770px) {
     .galery-box {
         grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
@@ -315,6 +358,10 @@ nav ul li a {
 
     .full-img {
         width: 80%;
+    }
+
+    .video-box {
+        grid-template-columns: repeat(auto-fit, minmax(90%, 1fr));
     }
 }
 
