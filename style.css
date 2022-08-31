@@ -41,8 +41,8 @@
 }
 
 .content ul li {
-    list-style: disc outside;
-    font-size: 18px;
+    font-size: 25px;
+    font-weight: 600;
 }
 
 .content p {
