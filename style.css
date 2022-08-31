@@ -49,6 +49,7 @@
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
+    font-size: 17px;
 }
 
 button {
@@ -143,6 +144,10 @@ nav ul li a {
     button {
         display: block;
         margin: 20px auto;
+    }
+    .content ul li {
+        font-size: 17px;
+        font-weight: 300;
     }
 }
 
