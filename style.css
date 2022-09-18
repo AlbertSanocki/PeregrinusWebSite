@@ -335,7 +335,7 @@ nav ul li a {
 .video-box {
     width: 80%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(640px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(560px, 1fr));
     grid-gap: 30px;
     margin: auto;
     padding-bottom: 30px;
