@@ -22,8 +22,29 @@
     top: 4%;
     left: 4%;
     cursor: pointer;
+    display: block;
+}
+
+.logo h1 {
     color: #fff;
     font-size: 30px;
+    font-weight: 400;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.logo p {
+    color: #fff;
+    font-size: 25px;
+    font-stretch: expanded;
+    text-align: center;
+    font-family: Georgia, serif;
+}
+
+.logo img {
+    position: relative;
+    width: 200px;
+    height: 120px;
 }
 
 .content {
@@ -135,8 +156,15 @@ nav ul li a {
 }
 
 @media screen and (max-width: 770px) {
-    .logo {
+    .logo h1{
         font-size: 20px;
+    }
+    .logo p{
+        font-size: 20px;
+    }
+    .logo img{
+        width: 130px;
+        height: 78px;
     }
     .content h2 {
         font-size: 44px;
